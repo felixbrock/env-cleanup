@@ -47,7 +47,7 @@ const removeTestSuiteDuplicates = async (
 
   const config: AxiosRequestConfig = {
     headers: { Authorization: `Bearer ${jwt}` },
-    params: new URLSearchParams({ targetOrgId }),
+    data: { targetOrgId },
   };
 
   const response = await axios.delete(
